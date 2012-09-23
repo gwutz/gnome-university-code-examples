@@ -29,7 +29,7 @@ gint main ( gint argc, gchar* argv[] )
 
     gchar *text = gtk_clipboard_wait_for_text( clipboard );
     if ( !text ) {
-        text = "";
+        text = g_strdup("");
     }
     gtk_entry_set_text( GTK_ENTRY(entry), text );
 
