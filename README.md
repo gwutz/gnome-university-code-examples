@@ -1,4 +1,4 @@
 gnome-university-code-examples
 ==============================
 
-Gnome University Code Examples
+You can find additional Information in the specific folders
