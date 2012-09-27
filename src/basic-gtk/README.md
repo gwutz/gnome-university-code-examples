@@ -27,3 +27,12 @@ $ gcc sync.c sync_window.h sync_window.c -o sync `pkg-config --cflags --libs gtk
 ```
 
 ![](https://raw.github.com/Wutzara/gnome-university-code-examples/master/src/basic-gtk/images/sync.png)
+
+textfileviewer.c text_window.h text_window.c
+--------------------------------------------
+
+```bash
+$ gcc textfileviewer.c text_window.c text_window.h -o text `pkg-config --cflags --libs gtk+-3.0`
+```
+
+![](https://raw.github.com/Wutzara/gnome-university-code-examples/master/src/basic-gtk/images/text_file_viewer.png)
