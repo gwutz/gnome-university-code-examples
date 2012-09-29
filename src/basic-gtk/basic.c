@@ -13,7 +13,8 @@ gint main ( gint argc, gchar* argv[] )
 
     GtkWidget *window = gtk_window_new( GTK_WINDOW_TOPLEVEL );
     gtk_window_set_title( GTK_WINDOW(window), "First GTK+ Program" );
-    g_object_set( window, "window-position", GTK_WIN_POS_CENTER, "border-width", 10, NULL );
+    gtk_window_set_position( GTK_WINDOW(window), GTK_WIN_POS_CENTER );
+    gtk_container_set_border_width( GTK_CONTAINER(window), 10 );
     gtk_window_set_default_size( GTK_WINDOW(window), 350, 70 );
     g_signal_connect ( GTK_WIDGET(window), "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
