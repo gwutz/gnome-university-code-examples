@@ -1,0 +1,28 @@
+@startuml
+skinparam shadowing false
+interface HsrIcalc
+
+HsrIcalc <|-- HsrProxy
+HsrIcalc <|-- HsrCalcImpl
+
+class HsrProxy {
+	+ hsr_proxy_new() : HsrProxy*	
+}
+
+class HsrCalcImpl {
+	+ hsr_calc_impl_new () : HsrCalcImpl*
+}
+
+interface HsrIcalc {
+	+ hsr_icalc_add(HsrIcalc *self, gint a, gint b) : gint
+}
+
+class HsrClient
+class HsrServer
+class HsrAdapter {
+	+ hsr_adapter_new() : HsrAdapter*
+	+ hsr_adapter_handle_request(HsrAdapter *self,
+	 		GDataInputStream *gis, GDataOutputStream *gos)
+}
+
+@enduml
