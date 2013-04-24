@@ -6,9 +6,8 @@ VIEWER_FILES = textfileviewer.c  text_window.c text_window.h
 BASIC_FILE = basic.c
 CLIPBOARD_FILE = basic_clipboard.c
 
-
 sync:
-    $(CC) $(PKG_CONFIG) $(SYNC_FILES) -o $@
+	$(CC) $(PKG_CONFIG) $(VIEWER_FILES) -o $@
 	
 textfileviewer:
 	$(CC) $(PKG_CONFIG) $(VIEWER_FILES) -o $@
