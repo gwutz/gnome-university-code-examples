@@ -45,8 +45,10 @@ typedef struct GuCodeViewerPrivate_  GuCodeViewerPrivate;
 struct GuCodeViewer_
 {
   GtkWindow parent;
-  /* add your public declarations here */
+  
+  
   GuCodeViewerPrivate * priv;
+  
 };
 
 struct GuCodeViewerClass_
