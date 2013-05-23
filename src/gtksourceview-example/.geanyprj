@@ -1,0 +1,7 @@
+[project]
+name=gtksourceview-auto-completion
+description=A simple GtkSourceView class example.
+base_path=./
+run_cmd=./main
+regenerate=true
+type=C
