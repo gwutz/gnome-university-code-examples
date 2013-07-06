@@ -36,7 +36,7 @@ static void
 gu_window_init (GuWindow * self)
 {
     GuWindowPrivate * priv = GU_WINDOW_GET_PRIVATE(self);
-
+	gtk_window_set_default_size(GTK_WINDOW(self), 800, 600);
 	priv->box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 5);
 	priv->note = gu_note_new();
 
