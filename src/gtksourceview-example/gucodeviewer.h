@@ -56,7 +56,6 @@ typedef struct
 typedef struct
 {
   GtkWindow parent;
-  GuCodeViewerPrivate * priv;
 } GuCodeViewer;
 
 typedef struct

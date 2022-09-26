@@ -36,7 +36,7 @@
 
 static void gu_code_viewer_finalize (GObject *object);
 
-G_DEFINE_TYPE (GuCodeViewer, gu_code_viewer, GTK_TYPE_WINDOW)
+G_DEFINE_TYPE_WITH_PRIVATE (GuCodeViewer, gu_code_viewer, GTK_TYPE_WINDOW)
 
 // callbacks ::
 
@@ -59,11 +59,10 @@ gu_code_viewer_open_file (GtkWidget * widget,
     const gchar * filename;
     gchar * file_content;
     GError * error = NULL;
-    GuCodeViewerPrivate * priv = cViewer->priv;
+    GuCodeViewerPrivate * priv = gu_code_viewer_get_instance_private(cViewer);
     filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER(dialog));
 
-    gboolean open = g_file_get_contents (filename, &file_content,
-                                         NULL, &error);
+    gboolean open = g_file_get_contents (filename, &file_content, NULL, &error);
     if (open == FALSE)
     {
       g_print("[WARNING] Error: %s\n", error->message);
@@ -80,7 +79,7 @@ gu_code_viewer_open_file (GtkWidget * widget,
 void
 gu_code_viewer_set_langhightlight (GtkWidget * widget, gpointer user_data)
 {
-  GuCodeViewerPrivate * priv = GU_CODE_VIEWER (user_data)->priv;
+  GuCodeViewerPrivate * priv = gu_code_viewer_get_instance_private( GU_CODE_VIEWER (user_data));
   const gchar * mime_type = gtk_button_get_label (GTK_BUTTON(widget));
   priv->lang = gtk_source_language_manager_get_language (GTK_SOURCE_LANGUAGE_MANAGER(priv->lm), mime_type);
 
@@ -93,10 +92,7 @@ gu_code_viewer_class_init (GuCodeViewerClass *klass)
   GObjectClass *g_object_class;
 
   g_object_class = G_OBJECT_CLASS (klass);
-
   g_object_class->finalize = gu_code_viewer_finalize;
-
-  g_type_class_add_private ((gpointer)klass, sizeof (GuCodeViewerPrivate));
 }
 
 static void
@@ -118,8 +114,7 @@ gu_code_viewer_init (GuCodeViewer *self)
   GtkWidget * langButton;
   GtkWidget * langLabel;
 
-  self->priv = G_TYPE_INSTANCE_GET_PRIVATE (self, GU_TYPE_CODE_VIEWER, GuCodeViewerPrivate);
-  GuCodeViewerPrivate * priv = self->priv;
+  GuCodeViewerPrivate * priv = gu_code_viewer_get_instance_private(self);
 
   // box create ::
   priv->vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
