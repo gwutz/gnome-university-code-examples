@@ -41,14 +41,14 @@ typedef struct
   GtkWidget * vbox;
   GtkWidget * hbox;
 
-  GtkWidget * OpenButton;
+  GtkWidget * open_button;
 
-  GtkWidget * cButton;
-  GtkWidget * javaButton;
-  GtkWidget * pyButton;
+  GtkWidget * c_button;
+  GtkWidget * java_button;
+  GtkWidget * py_button;
 
-  GtkWidget * sView;
-  GtkSourceBuffer * sBuffer;
+  GtkWidget * view;
+  GtkSourceBuffer * buffer;
   GtkSourceLanguage * lang;
   GtkSourceLanguageManager * lm; // language manager ::
 } GuCodeViewerPrivate;
@@ -70,7 +70,7 @@ GtkWidget *gu_code_viewer_new (void);
 // callbacks ::
 void gu_code_viewer_open_file          (GtkWidget * widget,
                                         gpointer user_data);
-void gu_code_viewer_set_langhightlight (GtkWidget * widget,
-                                        gpointer user_data);
+void gu_code_viewer_set_lang_hightlight (GtkWidget * widget,
+                                         gpointer user_data);
 
 G_END_DECLS

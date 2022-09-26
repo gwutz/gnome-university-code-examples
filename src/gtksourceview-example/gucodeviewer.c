@@ -44,11 +44,11 @@ void
 gu_code_viewer_open_file (GtkWidget * widget,
               gpointer user_data)
 {
-  GuCodeViewer * cViewer = GU_CODE_VIEWER (user_data);
+  GuCodeViewer * c_viewer = GU_CODE_VIEWER (user_data);
   GtkResponseType response;
   GtkWidget * dialog;
   dialog = gtk_file_chooser_dialog_new ("GU - Code Viewer open file diaog",
-                                        GTK_WINDOW(cViewer),
+                                        GTK_WINDOW(c_viewer),
                                         GTK_FILE_CHOOSER_ACTION_OPEN,
                                         _("_Open"), GTK_RESPONSE_ACCEPT, _("_Close"), GTK_RESPONSE_CANCEL,
                                         NULL);
@@ -59,7 +59,7 @@ gu_code_viewer_open_file (GtkWidget * widget,
     const gchar * filename;
     gchar * file_content;
     GError * error = NULL;
-    GuCodeViewerPrivate * priv = gu_code_viewer_get_instance_private(cViewer);
+    GuCodeViewerPrivate * priv = gu_code_viewer_get_instance_private(c_viewer);
     filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER(dialog));
 
     gboolean open = g_file_get_contents (filename, &file_content, NULL, &error);
@@ -70,20 +70,20 @@ gu_code_viewer_open_file (GtkWidget * widget,
     }
     else
     {
-      gtk_text_buffer_set_text (GTK_TEXT_BUFFER (priv->sBuffer), file_content, -1);
+      gtk_text_buffer_set_text (GTK_TEXT_BUFFER (priv->buffer), file_content, -1);
     }
   }
   gtk_widget_destroy (dialog);
 }
 
 void
-gu_code_viewer_set_langhightlight (GtkWidget * widget, gpointer user_data)
+gu_code_viewer_set_lang_hightlight (GtkWidget * widget, gpointer user_data)
 {
   GuCodeViewerPrivate * priv = gu_code_viewer_get_instance_private( GU_CODE_VIEWER (user_data));
   const gchar * mime_type = gtk_button_get_label (GTK_BUTTON(widget));
   priv->lang = gtk_source_language_manager_get_language (GTK_SOURCE_LANGUAGE_MANAGER(priv->lm), mime_type);
 
-  gtk_source_buffer_set_language (GTK_SOURCE_BUFFER (priv->sBuffer), priv->lang);
+  gtk_source_buffer_set_language (GTK_SOURCE_BUFFER (priv->buffer), priv->lang);
 }
 
 static void
@@ -120,11 +120,11 @@ gu_code_viewer_init (GuCodeViewer *self)
   priv->vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   priv->hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 
-  priv->OpenButton = gtk_button_new_with_mnemonic (_("_Open"));
+  priv->open_button = gtk_button_new_with_mnemonic (_("_Open"));
 
-  priv->cButton = gtk_button_new_with_label ("c");
-  priv->javaButton = gtk_button_new_with_label ("java");
-  priv->pyButton = gtk_button_new_with_label ("python");
+  priv->c_button = gtk_button_new_with_label ("c");
+  priv->java_button = gtk_button_new_with_label ("java");
+  priv->py_button = gtk_button_new_with_label ("python");
 
   // window with horizontal and vertical scroll ::
   scrolled = gtk_scrolled_window_new (NULL, NULL);
@@ -132,33 +132,33 @@ gu_code_viewer_init (GuCodeViewer *self)
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled),
                                   GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
-  priv->sView = gtk_source_view_new ();
-  gtk_container_add (GTK_CONTAINER(scrolled), priv->sView);
+  priv->view = gtk_source_view_new ();
+  gtk_container_add (GTK_CONTAINER(scrolled), priv->view);
 
   priv->lm = gtk_source_language_manager_new ();
-  priv->sBuffer = gtk_source_buffer_new (NULL);
-  gtk_source_buffer_set_highlight_syntax (GTK_SOURCE_BUFFER(priv->sBuffer), TRUE);
+  priv->buffer = gtk_source_buffer_new (NULL);
+  gtk_source_buffer_set_highlight_syntax (GTK_SOURCE_BUFFER(priv->buffer), TRUE);
 
-  gtk_text_view_set_buffer (GTK_TEXT_VIEW (priv->sView), GTK_TEXT_BUFFER(priv->sBuffer));
+  gtk_text_view_set_buffer (GTK_TEXT_VIEW (priv->view), GTK_TEXT_BUFFER(priv->buffer));
 
   gtk_container_add (GTK_CONTAINER(self), priv->vbox);
   gtk_box_pack_start (GTK_BOX(priv->vbox), priv->hbox, TRUE, TRUE, 5);
 
-  gtk_box_pack_start (GTK_BOX(priv->vbox), priv->OpenButton, FALSE, FALSE, 5);
-  gtk_box_pack_start (GTK_BOX(priv->vbox), priv->cButton, FALSE, FALSE, 5);
-  gtk_box_pack_start (GTK_BOX(priv->vbox), priv->javaButton, FALSE, FALSE, 5);
-  gtk_box_pack_start (GTK_BOX(priv->vbox), priv->pyButton, FALSE, FALSE, 5);
+  gtk_box_pack_start (GTK_BOX(priv->vbox), priv->open_button, FALSE, FALSE, 5);
+  gtk_box_pack_start (GTK_BOX(priv->vbox), priv->c_button, FALSE, FALSE, 5);
+  gtk_box_pack_start (GTK_BOX(priv->vbox), priv->java_button, FALSE, FALSE, 5);
+  gtk_box_pack_start (GTK_BOX(priv->vbox), priv->py_button, FALSE, FALSE, 5);
 
   gtk_box_pack_start (GTK_BOX(priv->hbox), scrolled, TRUE, TRUE, 0);
 
-  g_signal_connect (priv->OpenButton, "clicked",
+  g_signal_connect (priv->open_button, "clicked",
                     G_CALLBACK (gu_code_viewer_open_file), self);
-  g_signal_connect (priv->cButton, "clicked",
-                    G_CALLBACK (gu_code_viewer_set_langhightlight), self);
-  g_signal_connect (priv->javaButton, "clicked",
-                    G_CALLBACK (gu_code_viewer_set_langhightlight), self);
-  g_signal_connect (priv->pyButton, "clicked",
-                    G_CALLBACK (gu_code_viewer_set_langhightlight), self);
+  g_signal_connect (priv->c_button, "clicked",
+                    G_CALLBACK (gu_code_viewer_set_lang_hightlight), self);
+  g_signal_connect (priv->java_button, "clicked",
+                    G_CALLBACK (gu_code_viewer_set_lang_hightlight), self);
+  g_signal_connect (priv->py_button, "clicked",
+                    G_CALLBACK (gu_code_viewer_set_lang_hightlight), self);
   g_signal_connect (self, "destroy",
                     G_CALLBACK (gtk_main_quit), NULL);
 }
