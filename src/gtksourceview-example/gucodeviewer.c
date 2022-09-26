@@ -34,26 +34,6 @@
  * P.S.: Once again, sorry about my english.
  */
 
-
-struct GuCodeViewerPrivate_
-{
-  GtkWidget * vbox;
-  GtkWidget * hbox;
-
-  GtkWidget * OpenButton;
-
-  GtkWidget * cButton;
-  GtkWidget * javaButton;
-  GtkWidget * pyButton;
-
-  GtkWidget * sView;
-  GtkSourceBuffer * sBuffer;
-  GtkSourceLanguage * lang;
-  GtkSourceLanguageManager * lm; // language manager ::
-
-  gpointer delete_me;
-};
-
 static void gu_code_viewer_finalize (GObject *object);
 
 G_DEFINE_TYPE (GuCodeViewer, gu_code_viewer, GTK_TYPE_WINDOW)
@@ -88,7 +68,6 @@ gu_code_viewer_open_file (GtkWidget * widget,
     {
       g_print("[WARNING] Error: %s\n", error->message);
       error = NULL;
-
     }
     else
     {

@@ -37,23 +37,33 @@ G_BEGIN_DECLS
 #define GU_IS_CODE_VIEWER_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), GU_TYPE_CODE_VIEWER))
 #define GU_CODE_VIEWER_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), GU_TYPE_CODE_VIEWER, GuCodeViewerClass))
 
-typedef struct GuCodeViewer_         GuCodeViewer;
-typedef struct GuCodeViewerClass_    GuCodeViewerClass;
-typedef struct GuCodeViewerPrivate_  GuCodeViewerPrivate;
+typedef struct
+{
+  GtkWidget * vbox;
+  GtkWidget * hbox;
 
-struct GuCodeViewer_
+  GtkWidget * OpenButton;
+
+  GtkWidget * cButton;
+  GtkWidget * javaButton;
+  GtkWidget * pyButton;
+
+  GtkWidget * sView;
+  GtkSourceBuffer * sBuffer;
+  GtkSourceLanguage * lang;
+  GtkSourceLanguageManager * lm; // language manager ::
+} GuCodeViewerPrivate;
+
+typedef struct
 {
   GtkWindow parent;
-
-
   GuCodeViewerPrivate * priv;
+} GuCodeViewer;
 
-};
-
-struct GuCodeViewerClass_
+typedef struct
 {
   GtkWindowClass parent_class;
-};
+} GuCodeViewerClass;
 
 
 GType gu_code_viewer_get_type (void) G_GNUC_CONST;
