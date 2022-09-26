@@ -97,12 +97,7 @@ gu_code_viewer_class_init (GuCodeViewerClass *klass)
 static void
 gu_code_viewer_finalize (GObject *object)
 {
-  GuCodeViewer *self;
-
   g_return_if_fail (GU_IS_CODE_VIEWER (object));
-
-  self = GU_CODE_VIEWER (object);
-
   G_OBJECT_CLASS (gu_code_viewer_parent_class)->finalize (object);
 }
 
@@ -110,8 +105,6 @@ static void
 gu_code_viewer_init (GuCodeViewer *self)
 {
   GtkWidget * scrolled;
-  GtkWidget * langButton;
-  GtkWidget * langLabel;
 
   GuCodeViewerPrivate * priv = gu_code_viewer_get_instance_private(self);
 
