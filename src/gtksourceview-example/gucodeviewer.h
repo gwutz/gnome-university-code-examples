@@ -27,6 +27,7 @@
 
 #include <gtk/gtk.h>
 #include <glib-object.h>
+#include <gtksourceview/gtksource.h>
 
 G_BEGIN_DECLS
 

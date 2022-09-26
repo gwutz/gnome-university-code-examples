@@ -23,10 +23,6 @@
 
 #include "gucodeviewer.h"
 
-#include <gtksourceview/gtksourceview.h>
-#include <gtksourceview/gtksourcebuffer.h>
-#include <gtksourceview/gtksourcelanguage.h>
-#include <gtksourceview/gtksourcelanguagemanager.h>
 
 /*  I decided to design it with the GtkBox to pack the widgets
  * instead of GtkGrid or something like this, just becouse I wanted
