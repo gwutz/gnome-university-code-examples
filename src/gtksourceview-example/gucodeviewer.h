@@ -68,8 +68,7 @@ GType gu_code_viewer_get_type (void) G_GNUC_CONST;
 GtkWidget *gu_code_viewer_new (void);
 
 // callbacks ::
-void gu_code_viewer_open_file          (GtkWidget * widget,
-                                        gpointer user_data);
+void gu_code_viewer_open_file           (gpointer user_data);
 void gu_code_viewer_set_lang_hightlight (GtkWidget * widget,
                                          gpointer user_data);
 

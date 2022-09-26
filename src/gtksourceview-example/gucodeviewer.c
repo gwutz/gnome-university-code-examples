@@ -41,8 +41,7 @@ G_DEFINE_TYPE_WITH_PRIVATE (GuCodeViewer, gu_code_viewer, GTK_TYPE_WINDOW)
 // callbacks ::
 
 void
-gu_code_viewer_open_file (GtkWidget * widget,
-              gpointer user_data)
+gu_code_viewer_open_file (gpointer user_data)
 {
   GuCodeViewer * c_viewer = GU_CODE_VIEWER (user_data);
   GtkResponseType response;
@@ -151,8 +150,8 @@ gu_code_viewer_init (GuCodeViewer *self)
 
   gtk_box_pack_start (GTK_BOX(priv->hbox), scrolled, TRUE, TRUE, 0);
 
-  g_signal_connect (priv->open_button, "clicked",
-                    G_CALLBACK (gu_code_viewer_open_file), self);
+  g_signal_connect_swapped (priv->open_button, "clicked",
+                            G_CALLBACK (gu_code_viewer_open_file), self);
   g_signal_connect (priv->c_button, "clicked",
                     G_CALLBACK (gu_code_viewer_set_lang_hightlight), self);
   g_signal_connect (priv->java_button, "clicked",
