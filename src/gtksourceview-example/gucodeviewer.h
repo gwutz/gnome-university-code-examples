@@ -21,8 +21,7 @@
  *
  */
 
-#ifndef GUCODEVIEWER_H_
-#define GUCODEVIEWER_H_
+#pragma once
 
 #include <gtk/gtk.h>
 #include <glib-object.h>
@@ -76,5 +75,3 @@ void gu_code_viewer_set_langhightlight (GtkWidget * widget,
                                         gpointer user_data);
 
 G_END_DECLS
-
-#endif /* GUCODEVIEWER_H_ */
