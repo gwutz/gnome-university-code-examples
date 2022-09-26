@@ -21,12 +21,21 @@
  *
  */
 
-#include <gtk/gtk.h>
 #include "gucodeviewer.h"
+
+#include <glib/gi18n.h>
+#include <locale.h>
+#include <gtk/gtk.h>
 
 int main(int argc, char **argv)
 {
   GtkWidget * window;
+
+  setlocale (LC_ALL, "");
+  bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+  textdomain (GETTEXT_PACKAGE);
+
   gtk_init(&argc, &argv);
 
   window = gu_code_viewer_new ();

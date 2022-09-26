@@ -1,0 +1,27 @@
+# Burmese (Myanmar) translation of gtk+.
+# Copyright © 2009, 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gtk+ package.
+# Russell Kyaw <rkyaw@yahoo.com>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk+\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-26 23:30+0200\n"
+"PO-Revision-Date: 2010-01-19 16:30+0200\n"
+"Last-Translator: Russell Kyaw <rkyaw@yahoo.com>\n"
+"Language-Team: Burmese <my@li.org>\n"
+"Language: my\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: gucodeviewer.c:53 gucodeviewer.c:128
+#, fuzzy
+msgid "_Open"
+msgstr "ဖွင့်ပါ"
+
+#: gucodeviewer.c:53
+#, fuzzy
+msgid "_Close"
+msgstr "ပိတ်ပါ"

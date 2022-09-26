@@ -1,0 +1,56 @@
+# translation of gtk+.master.gu.po to Gujarati
+# translation of gtk.po to
+# Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
+# MagNet <magnet@magnet-i.com>, 2004.
+# Ankit Patel <ankit644@yahoo.com>, 2005, 2006.
+# Ankit Patel <ankit@redhat.com>, 2007, 2009.
+# Sweta Kothari <swkothar@redhat.com>, 2008, 2009, 2010, 2012, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk+.master.gu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-26 23:30+0200\n"
+"PO-Revision-Date: 2014-09-08 16:13+0530\n"
+"Last-Translator: \n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"X-Generator: Lokalize 1.0\n"
+
+#: gucodeviewer.c:53 gucodeviewer.c:128
+msgid "_Open"
+msgstr "ખોલો (_O)"
+
+#: gucodeviewer.c:53
+msgid "_Close"
+msgstr "બંધ કરો (_C)"

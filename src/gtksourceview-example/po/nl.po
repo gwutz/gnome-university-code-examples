@@ -1,0 +1,50 @@
+# Dutch translation for gtk+
+# This file is distributed under the same license as the gtk+ package.
+#
+# expander             - samenvouwer/openvouwen
+# image format         - bestandsformaat
+# image file           - afbeelding
+# image file format    - afbeeldingstype
+# image type           - afbeeldingstype
+# job                  - printopdracht
+# render               - render/weergeven/tonen/opmaken
+# spinbutton           - spinknop/teller
+# tag                  - markering/etiket/label/trefwoord
+# tooltip              - tooltip/werktip/tip
+# separator            - scheiding/scheidingslijn/scheidingsteken
+# selected             - geselecteerde/gekozen
+# standard display     - standaard display
+#
+# Dirk-Jan C. Binnema <djcb@djcbsoftware.nl>, 2002.
+# Ronald Hummelink <ronald@hummelink.xs4all.nl>, 2002.
+# Tino Meinen <tino.meinen@gmail.com>, 2002–2010.
+# Reinout van Schouwen <reinouts@gnome.org>, 2009.
+# Vincent van Adrighem <adrighem@gnome.org>, 2009.
+# Wouter Bolsterlee <wbolster@gnome.org>, 2011–2012.
+# Rachid BM <rachidbm@ubuntu.com>, 2011–2012, 2013.
+# Hannie Dumoleyn <hannie@ubuntu-nl.org>, 2013, 2016, 2017.
+# Nathan Follens <nfollens@gnome.org>, 2018-2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk+\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-26 23:30+0200\n"
+"PO-Revision-Date: 2022-03-25 11:59+0100\n"
+"Last-Translator: Nathan Follens <nfollens@gnome.org>\n"
+"Language-Team: Dutch <gnome-nl-list@gnome.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-03-25 10:32+0000\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Project-Style: gnome\n"
+
+#: gucodeviewer.c:53 gucodeviewer.c:128
+msgid "_Open"
+msgstr "_Openen"
+
+#: gucodeviewer.c:53
+msgid "_Close"
+msgstr "Sl_uiten"

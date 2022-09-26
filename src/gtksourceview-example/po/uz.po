@@ -1,0 +1,28 @@
+# translation of uz@cyrillic.po to Uzbek
+# Copyright (C) 1998-2003, 2004, 2008 Free Software Foundation, Inc.
+#
+# Mashrab Kuvatov <kmashrab@uni-bremen.de>, 2003, 2004.
+# Nurali Abdurahmonov <mavnur@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: uz@cyrillic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-26 23:30+0200\n"
+"PO-Revision-Date: 2008-12-28 09:44+0500\n"
+"Last-Translator: Nurali Abdurahmonov <mavnur@gmail.com>\n"
+"Language-Team: Uzbek\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: gucodeviewer.c:53 gucodeviewer.c:128
+#, fuzzy
+msgid "_Open"
+msgstr "_Ochish"
+
+#: gucodeviewer.c:53
+#, fuzzy
+msgid "_Close"
+msgstr "_Yopish"

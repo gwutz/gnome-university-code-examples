@@ -1,0 +1,28 @@
+# Afrikaans translation of gtk+.
+# This file is distributed under the same license as the gtk+ package.
+# Copyright (C)
+# Zuza Software Foundation <info@translate.org.za>, 2004
+# F Wolff <friedel@translate.org.za>, 2008, 2009, 2010, 2011, 2013, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk+ 2.6-branch\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-26 23:30+0200\n"
+"PO-Revision-Date: 2018-06-30 00:26+0200\n"
+"Last-Translator: Pieter Schoeman <pieter@sonbesie.co.za>\n"
+"Language-Team: translate-discuss-af@lists.sourceforge.net\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.8\n"
+"X-Project-Style: gnome\n"
+
+#: gucodeviewer.c:53 gucodeviewer.c:128
+msgid "_Open"
+msgstr "_Open"
+
+#: gucodeviewer.c:53
+msgid "_Close"
+msgstr "_Sluit"

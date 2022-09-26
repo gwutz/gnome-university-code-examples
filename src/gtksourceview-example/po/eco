@@ -1,0 +1,786 @@
+# translation of gitg.master.po to Español
+# Spanish translation of gitg.
+# Copyright (C) 2009 gitg's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gitg package.
+# 
+# Chihau Chau <chihau@gmail.com>, 2009.
+# Jorge González <jorgegonz@svn.gnome.org>, 2009, 2010, 2011.
+# 
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2010-2022.
+# Daniel Mustieles García <daniel.mustieles@gmail.com>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gitg.master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-25 19:07+0200\n"
+"PO-Revision-Date: 2022-02-24 12:30+0100\n"
+"Last-Translator: Daniel Mustieles García <daniel.mustieles@gmail.com>\n"
+"Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-DamnedLies-Scope: partial\n"
+"X-Generator: Gtranslator 41.0\n"
+
+#: gucodeviewer.c:123
+msgid "_Open"
+msgstr "_Abrir"
+
+#, c-format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#, c-format
+
+#, c-format
+
+
+
+#, c-format
+
+#, c-format
+
+
+
+
+
+
+#, c-format
+
+
+
+
+
+
+#, c-format
+
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+
+
+#, c-format
+
+
+#, c-format
+
+
+#, c-format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#, c-format
+
+
+
+
+
+#, c-format
+
+#, c-format
+
+
+#, c-format
+
+#, c-format
+
+
+
+
+#, c-format
+
+
+#, c-format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#, c-format
+
+#, c-format
+
+
+
+
+#, c-format
+
+
+
+#, c-format
+
+
+
+
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+
+#, c-format
+
+
+
+
+
+
+
+
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+
+#, c-format
+
+#, c-format
+
+
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+
+
+
+#, c-format
+
+
+
+
+
+
+#, c-format
+
+#, c-format
+
+
+
+
+
+
+
+
+
+#, c-format
+
+
+
+
+
+
+
+
+
+
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+
+
+
+
+
+
+
+#, c-format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#, c-format
+
+
+#, c-format
+
+
+#, c-format
+
+#, c-format
+
+
+
+
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+#, c-format
+
+
+
+#, c-format
+
+
+
+
+
+
+
+
+#, c-format
+
+#, c-format
+
+
+#, c-format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -23,6 +23,7 @@
 
 #include "gucodeviewer.h"
 
+#include <glib/gi18n.h>
 
 /*  I decided to design it with the GtkBox to pack the widgets
  * instead of GtkGrid or something like this, just becouse I wanted
@@ -69,8 +70,7 @@ gu_code_viewer_open_file (GtkWidget * widget,
   dialog = gtk_file_chooser_dialog_new ("GU - Code Viewer open file diaog",
                                         GTK_WINDOW(cViewer),
                                         GTK_FILE_CHOOSER_ACTION_OPEN,
-                                        GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-                                        GTK_STOCK_OPEN, GTK_RESPONSE_ACCEPT,
+                                        _("_Open"), GTK_RESPONSE_ACCEPT, _("_Close"), GTK_RESPONSE_CANCEL,
                                         NULL);
 
   response = gtk_dialog_run (GTK_DIALOG (dialog));
@@ -146,7 +146,7 @@ gu_code_viewer_init (GuCodeViewer *self)
   priv->vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   priv->hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 
-  priv->OpenButton = gtk_button_new_from_stock (GTK_STOCK_OPEN);
+  priv->OpenButton = gtk_button_new_with_mnemonic (_("_Open"));
 
   priv->cButton = gtk_button_new_with_label ("c");
   priv->javaButton = gtk_button_new_with_label ("java");
