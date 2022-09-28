@@ -14,6 +14,7 @@ typedef struct
   GtkButton *java_button;
   GtkButton *python_button;
   GtkSourceView *source_view;
+  GtkSourceLanguageManager * lm;
 } GuCodeViewerAppWindowPrivate;
 
 G_DEFINE_TYPE_WITH_PRIVATE(GuCodeViewerAppWindow, gu_code_viewer_app_window, GTK_TYPE_APPLICATION_WINDOW)
@@ -46,13 +47,15 @@ void
 gu_code_viewer_set_lang_highlight (GtkWidget * widget, gpointer user_data)
 {
   GtkSourceLanguage * lang;
-  GtkSourceLanguageManager * lm;
+  GuCodeViewerAppWindowPrivate *priv;
+
+  priv = gu_code_viewer_app_window_get_instance_private (GU_CODE_VIEWER_APP_WINDOW(user_data));
+  GtkSourceBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW(priv->source_view));
 
   const gchar * mime_type = gtk_button_get_label (GTK_BUTTON(widget));
-  lm = gtk_source_language_manager_new ();
-  lang = gtk_source_language_manager_get_language (GTK_SOURCE_LANGUAGE_MANAGER(lm), mime_type);
+  lang = gtk_source_language_manager_get_language (priv->lm, mime_type);
 
-  gtk_source_buffer_set_language (GTK_SOURCE_BUFFER (user_data), lang);
+  gtk_source_buffer_set_language (buffer, lang);
 }
 
 void
@@ -101,17 +104,19 @@ gu_code_viewer_app_window_open (GuCodeViewerAppWindow *win,
 
   priv = gu_code_viewer_app_window_get_instance_private (win);
 
+  priv->lm = gtk_source_language_manager_new ();
+
   GtkSourceBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW(priv->source_view));
   gtk_source_buffer_set_highlight_syntax (buffer, TRUE);
 
   g_signal_connect_swapped (priv->open_button, "clicked",
                             G_CALLBACK (gu_code_viewer_open_file), priv->source_view);
   g_signal_connect (priv->c_button, "clicked",
-                    G_CALLBACK (gu_code_viewer_set_lang_highlight), buffer);
+                    G_CALLBACK (gu_code_viewer_set_lang_highlight), win);
   g_signal_connect (priv->java_button, "clicked",
-                    G_CALLBACK (gu_code_viewer_set_lang_highlight), buffer);
+                    G_CALLBACK (gu_code_viewer_set_lang_highlight), win);
   g_signal_connect (priv->python_button, "clicked",
-                    G_CALLBACK (gu_code_viewer_set_lang_highlight), buffer);
+                    G_CALLBACK (gu_code_viewer_set_lang_highlight), win);
   g_signal_connect (win, "destroy",
                     G_CALLBACK (gtk_main_quit), NULL);
   basename = g_file_get_basename (file);
