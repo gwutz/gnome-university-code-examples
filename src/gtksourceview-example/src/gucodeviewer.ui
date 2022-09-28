@@ -3,9 +3,12 @@
 <interface>
   <requires lib="gtk+" version="3.24"/>
   <requires lib="gtksourceview" version="4.0"/>
-  <object class="GtkWindow" id="window">
-    <property name="can-focus">False</property>
+  <template class="GuCodeViewerAppWindow" parent="GtkApplicationWindow">
+    <property name="title" translatable="yes">Gu CodeViewer</property>
+    <property name="default-width">600</property>
+    <property name="default-height">400</property>
     <child>
+
       <object class="GtkBox">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
@@ -16,7 +19,7 @@
             <property name="can-focus">True</property>
             <property name="shadow-type">in</property>
             <child>
-              <object class="GtkSourceView" id="sourceview">
+              <object class="GtkSourceView" id="source_view">
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="left-margin">2</property>
@@ -31,7 +34,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="open">
+          <object class="GtkButton" id="open_button">
             <property name="label" translatable="yes">_Open</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
@@ -45,7 +48,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="c">
+          <object class="GtkButton" id="c_button">
             <property name="label" translatable="yes">c</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
@@ -58,7 +61,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="java">
+          <object class="GtkButton" id="java_button">
             <property name="label" translatable="yes">java</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
@@ -71,7 +74,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="python">
+          <object class="GtkButton" id="python_button">
             <property name="label" translatable="yes">python</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
@@ -85,5 +88,5 @@
         </child>
       </object>
     </child>
-  </object>
+  </template>
 </interface>

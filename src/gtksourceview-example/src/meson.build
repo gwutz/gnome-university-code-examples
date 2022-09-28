@@ -1,9 +1,16 @@
-datadir = get_option('prefix') / get_option('datadir') / project_name
-add_project_arguments('-DDATADIR="'+datadir+'"', language:'c')
+gnome = import('gnome')
 
-install_data('gucodeviewer.ui', install_dir : datadir)
+resources = gnome.compile_resources(
+  'gucodeviewer resources',
+  'gucodeviewer.gresource.xml',
+  source_dir: '.'
+)
 
-executable('gucodeviewer', 'main.c',
+executable('gucodeviewer',
+           'main.c',
+           'gucodeviewerapp.c',
+           'gucodeviewerappwindow.c',
+           resources,
            dependencies: [
              dependency('gtk+-3.0'),
              dependency('gtksourceview-4')
