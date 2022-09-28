@@ -1,0 +1,29 @@
+# translation of gtk+.HEAD.po to Punjabi
+# Copyright (C) 2004 THE gtk+.HEAD'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gtk+.HEAD package.
+#
+# Amanpreet Singh Alam <amanlinux@netscape.net>, 2004.
+# Amanpreet Singh Alam <aalam@users.sf.net>, 2005,2006,2007, 2008, 2009.
+# A S Alam <aalam@users.sf.net>, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk+.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-26 23:30+0200\n"
+"PO-Revision-Date: 2019-09-02 08:42-0700\n"
+"Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
+"Language-Team: Punjabi <punjabi-users@list.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.04.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gucodeviewer.c:53 gucodeviewer.c:128
+msgid "_Open"
+msgstr "ਖੋਲ੍ਹੋ(_O)"
+
+#: gucodeviewer.c:53
+msgid "_Close"
+msgstr "ਬੰਦ ਕਰੋ(_C)"

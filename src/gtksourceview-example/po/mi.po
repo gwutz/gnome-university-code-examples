@@ -1,0 +1,27 @@
+# Māori translation of gtk+ 2.0.
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gtk+ package.
+# John C Barstow <jbowtie@amathaine.com>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk+ 2.3.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-26 23:30+0200\n"
+"PO-Revision-Date: 2004-01-27 07:36+1300\n"
+"Last-Translator: Wesley Parish <wes.parish@paradise.net.nz>\n"
+"Language-Team: GNOME Māori Team <maori@nzlinux.org.nz>\n"
+"Language: mi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gucodeviewer.c:53 gucodeviewer.c:128
+#, fuzzy
+msgid "_Open"
+msgstr "_Huaki"
+
+#: gucodeviewer.c:53
+#, fuzzy
+msgid "_Close"
+msgstr "_Kati"

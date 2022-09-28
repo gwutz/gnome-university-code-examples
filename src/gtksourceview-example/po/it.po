@@ -1,0 +1,34 @@
+# This is the Italian locale definition for Gtk+.
+# Copyright (C) 1998, 1999, 2000 - 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018 Free Software Foundation, Inc.
+# Copyright (C) 2019, 2020, 2021, 2022 Free Software Foundation, Inc.
+# Tristan Tarrant <ttarrant@etnoteam.it>, 1999.
+# Christopher Gabriel <cgabriel@gnu.org>, 2000, 2001, 2002.
+# Alessio Dessì <alessiodessi@tiscali.it>, 2003, 2004, 2005, 2006, 2007.
+# Luca Ferretti <lferrett@gnome.org>, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
+# Milo Casagrande <milo@milo.name>, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Gianvito Cavasoli <gianvito@gmx.it>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk+\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-26 23:30+0200\n"
+"PO-Revision-Date: 2022-03-14 14:46+0100\n"
+"Last-Translator: Milo Casagrande <milo@milo.name>\n"
+"Language-Team: Italiano <gnome-it-list@gnome.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: /Users/milo/Development/l10n\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: gucodeviewer.c:53 gucodeviewer.c:128
+msgid "_Open"
+msgstr "_Apri"
+
+#: gucodeviewer.c:53
+msgid "_Close"
+msgstr "_Chiudi"
